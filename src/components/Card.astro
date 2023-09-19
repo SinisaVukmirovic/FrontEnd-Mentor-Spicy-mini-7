@@ -1,0 +1,71 @@
+---
+
+---
+
+<input type="radio" name="slider" id="s1" checked>
+
+<label for="s1" id="slide1">
+    <div class="card">
+        <h2>Basic</h2>
+        <div class="price">
+            <span class="dollar-sign">$</span><span class="digits">19.99</span>
+        </div>
+
+        <h3>500 GB Storage</h3>
+        <h3>2 Users Allowed</h3>
+        <h3>Send up to 3 GB</h3>
+
+        <button class="cta">Learn More</button>
+    </div>
+</label>
+
+<style>
+    input {
+        display: none;
+    }
+
+    .card {
+        background-color: lightgreen;
+        padding: 2.5rem 2rem;
+        text-align: center;
+        color: var(--Grayish-Blue);
+        border-radius: 1.5rem;
+        max-width: 25rem;
+        margin-bottom: 2rem;
+    }
+
+    .price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-block: 1.25rem 2.5rem;
+        color: var(--Dark-Grayish-Blue);
+    }
+
+    .dollar-sign {
+        font-size: 3rem;
+    }
+
+    .digits {
+        font-size: 5.25rem;
+    }
+
+    h3 {
+        margin-block: 2.25rem;
+    }
+
+    .cta {
+        width: 100%;
+        /* display: block; */
+        /* margin: 0 auto; */
+        border: none;
+        border-radius: .5rem;
+        padding-block: 1rem;
+        margin-top: 1.5rem;
+        font-family: inherit;
+        text-transform: uppercase;
+        background-image: var(--Linear-Gradient);
+        color: var(--Very-Light-Grayish-Blue);
+        letter-spacing: 3px;
+    }
+</style>

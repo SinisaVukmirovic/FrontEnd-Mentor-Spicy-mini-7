@@ -1,5 +1,5 @@
 <div class="toggle-switch-container">
-    <span class="text">Anually</span>
+    <span class="text">Annually</span>
     <input type="checkbox" id="switch" class="checkbox">
     <label for="switch" class="toggle"></label>
     <span class="text">Monthly</span>
@@ -12,16 +12,19 @@
     }
 
     .text {
-        margin: 0 1rem;
+        margin: 0 2rem;
+        color: var(--Light-Grayish-Blue);
+        font-size: 1.1rem;
     }
 
     /* toggle in label designing */
     .toggle {
         position: relative;
         display: inline-block;
-        width: 3.5rem;
-        height: 2rem;
-        background-color: red;
+        width: 4rem;
+        height: 2.3rem;
+        /* background-color: var(--Linear-Gradient); */
+        background-image: var(--Linear-Gradient);
         border-radius: 10rem;
     }
 
@@ -29,23 +32,24 @@
     .toggle:after {
         content: "";
         position: absolute;
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.7rem;
+        height: 1.7rem;
         border-radius: 50%;
         background-color: #eee;
-        top: 0.25rem;
-        left: 0.25rem;
-        transition: all 0.5s;
+        top: 0.3rem;
+        left: 0.3rem;
+        transition: all 0.3s ease-in-out;
     }
 
     /* Checkbox checked effect */
     .checkbox:checked + .toggle::after {
-        left: 1.75rem;
+        left: 2rem;
     }
 
     /* Checkbox checked toggle label bg color */
     .checkbox:checked + .toggle {
-        background-color: green;
+        /* background-color: var(--Linear-Gradient); */
+        background-image: var(--Linear-Gradient);
     }
 
     /* Checkbox vanished */
