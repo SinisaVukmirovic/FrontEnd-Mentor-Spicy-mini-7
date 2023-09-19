@@ -1,0 +1,55 @@
+<div class="toggle-switch-container">
+    <span class="text">Anually</span>
+    <input type="checkbox" id="switch" class="checkbox">
+    <label for="switch" class="toggle"></label>
+    <span class="text">Monthly</span>
+</div>
+
+<style>
+    .toggle-switch-container {
+        display: flex;
+        align-items: center;
+    }
+
+    .text {
+        margin: 0 1rem;
+    }
+
+    /* toggle in label designing */
+    .toggle {
+        position: relative;
+        display: inline-block;
+        width: 3.5rem;
+        height: 2rem;
+        background-color: red;
+        border-radius: 10rem;
+    }
+
+    /* After slide changes */
+    .toggle:after {
+        content: "";
+        position: absolute;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        background-color: #eee;
+        top: 0.25rem;
+        left: 0.25rem;
+        transition: all 0.5s;
+    }
+
+    /* Checkbox checked effect */
+    .checkbox:checked + .toggle::after {
+        left: 1.75rem;
+    }
+
+    /* Checkbox checked toggle label bg color */
+    .checkbox:checked + .toggle {
+        background-color: green;
+    }
+
+    /* Checkbox vanished */
+    .checkbox {
+        display: none;
+    }
+</style>
