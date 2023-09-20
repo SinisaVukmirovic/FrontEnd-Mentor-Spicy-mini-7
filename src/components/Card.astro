@@ -32,27 +32,28 @@ const slides = [
     }
 ]
 ---
-
-{slides.map(slide => (
-    <input type="radio" name="slider" id={slide.idAndFor} checked>
-    
-    <label for={slide.idAndFor} id={slide.id}>
-        <div class="card">
-            <h2>{slide.plan}</h2>
-            <div class="price">
-                <span class="dollar-sign">$</span>
-                <span class="digits monthly">{slide.monthly}</span>
-                <span class="digits annually">{slide.annually}</span>
+<div class="cards">
+    {slides.map(slide => (
+        <input type="radio" name="slider" id={slide.idAndFor} checked>
+        
+        <label for={slide.idAndFor} id={slide.id}>
+            <div class="card">
+                <h2>{slide.plan}</h2>
+                <div class="price">
+                    <span class="dollar-sign">$</span>
+                    <span class="digits monthly">{slide.monthly}</span>
+                    <span class="digits annually">{slide.annually}</span>
+                </div>
+        
+                <h3>{slide.storage}</h3>
+                <h3>{slide.users}</h3>
+                <h3 class="last-child">{slide.limit}</h3>
+        
+                <button class="cta">Learn More</button>
             </div>
-    
-            <h3>{slide.storage}</h3>
-            <h3>{slide.users}</h3>
-            <h3>{slide.limit}</h3>
-    
-            <button class="cta">Learn More</button>
-        </div>
-    </label>
-))}
+        </label>
+    ))}
+</div>
 
 <style>
     input {
@@ -76,37 +77,49 @@ const slides = [
         max-width: 25rem;
         margin-bottom: 3rem;
         margin-inline: auto;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+    }
+
+    h2 {
+        font-size: 1.25rem;
     }
 
     .price {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-block: 1.25rem 2.5rem;
+        // margin-block: 1.25rem 2.5rem;
+        margin: 1.25rem 0;
         color: var(--Dark-Grayish-Blue);
     }
 
     .dollar-sign {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .digits {
-        font-size: 5.1rem;
+        font-size: 4.75rem;
     }
 
     h3 {
-        margin-block: 2.25rem;
+        font-size: 1rem;
+        padding-block: 1.25rem;
+        border-top: 1px solid var(--Light-Grayish-Blue);
+    }
+
+    .last-child {
+        border-bottom: 1px solid var(--Light-Grayish-Blue);
     }
 
     .cta {
         width: 100%;
-        /* display: block; */
-        /* margin: 0 auto; */
         border: none;
         border-radius: .5rem;
         padding-block: 1rem;
         margin-top: 1.5rem;
         font-family: inherit;
+        font-size: .8rem;
         text-transform: uppercase;
         background-image: linear-gradient(to right, var(--Linear-Gradient));
         color: var(--Very-Light-Grayish-Blue);
@@ -114,7 +127,7 @@ const slides = [
     }
 
     #slide2 .card {
-        background-image: linear-gradient(to top, var(--Linear-Gradient));
+        background-image: linear-gradient(to bottom, var(--Linear-Gradient));
         color: var(--Very-Light-Grayish-Blue);
 
         .price {
@@ -125,6 +138,25 @@ const slides = [
             color: var(--Dark-Grayish-Blue);
             // background-color: var(--Very-Light-Grayish-Blue);
             background: var(--Very-Light-Grayish-Blue);
+        }
+    }
+
+    @media (min-width: 1440px) {
+        .cards {
+            width: 25rem;
+            height: auto;
+            margin: 0 auto;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            position: relative;
+
+            & .card {
+                position: absolute;
+                top: 0;
+                left: 0;
+                perspective: 1000px;
+                transform-style: preserve-3d;
+            }
         }
     }
 
