@@ -21,7 +21,7 @@ This is a SPICED UP solution to the [Pricing component with toggle challenge on 
 ### Links
 
 - Solution URL: [CODE](https://github.com/SinisaVukmirovic/FrontEnd-Mentor-Spicy-mini-7)
-- Live Site URL: [DEMO](https://sinisavukmirovic.github.io/FrontEnd-Mentor-Spicy-mini-7/)
+- Live Site URL: [DEMO](https://front-end-mentor-spicy-mini-7.vercel.app/)
 
 ## Author
 
