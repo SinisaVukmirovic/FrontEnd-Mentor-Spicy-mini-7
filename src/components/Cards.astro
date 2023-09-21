@@ -1,61 +1,7 @@
 ---
 import RadioBtns from './RadioBtns.astro';
 import Card from './Card.astro';
-// const slides = [
-//     {
-//         idAndFor: 's1',
-//         id: 'slide1',
-//         plan: 'Basic',
-//         monthly: '19.99',
-//         annually: '199.99',
-//         storage: '500 GB Storage',
-//         users: '2 Users Allowed',
-//         limit: 'Send up to 3 GB'
-//     },
-//     {
-//         idAndFor: 's2',
-//         id: 'slide2',
-//         plan: 'Professional',
-//         monthly: '24.99',
-//         annually: '249.99',
-//         storage: '1 TB Storage',
-//         users: '5 Users Allowed',
-//         limit: 'Send up to 10 GB'
-//     },
-//     {
-//         idAndFor: 's3',
-//         id: 'slide3',
-//         plan: 'Master',
-//         monthly: '39.99',
-//         annually: '399.99',
-//         storage: '2 TB Storage',
-//         users: '10 Users Allowed',
-//         limit: 'Send up to 20 GB'
-//     }
-// ]
 ---
-<!-- <div class="cards">
-    {slides.map(slide => (
-        <input type="radio" name="slider" id={slide.idAndFor} checked>
-        
-        <label for={slide.idAndFor} id={slide.id}>
-            <div class="card">
-                <h2>{slide.plan}</h2>
-                <div class="price">
-                    <span class="dollar-sign">$</span>
-                    <span class="digits monthly">{slide.monthly}</span>
-                    <span class="digits annually">{slide.annually}</span>
-                </div>
-        
-                <h3>{slide.storage}</h3>
-                <h3>{slide.users}</h3>
-                <h3 class="last-child">{slide.limit}</h3>
-        
-                <button class="cta">Learn More</button>
-            </div>
-        </label>
-    ))}
-</div> -->
 
 <RadioBtns />
 
@@ -80,44 +26,4 @@ import Card from './Card.astro';
         }
     }
     
-    @media (min-width: 1440px) {
-        /* .cards {
-            display: grid;
-            width: 25rem;
-            height: auto;
-            margin: 0 auto;
-            perspective: 1000px;
-            transform-style: preserve-3d;
-            position: relative; */
-
-            /* & .card {
-                position: absolute;
-                top: 0;
-                left: 0;
-                perspective: 1000px;
-                transform-style: preserve-3d;
-            } */
-        }
-/* 
-        #s1:checked~.cards #slide1,
-        #s2:checked~.cards #slide2,
-        #s3:checked~.cards #slide3 {
-            box-shadow: 0 25px 50px 0 rgba(0, 0, 0, .5);
-            transform: translate3d(0, 0, 0);
-        }
-
-        #s3:checked~.cards #slide1,
-        #s1:checked~.cards #slide2,
-        #s2:checked~.cards #slide3 {
-            box-shadow: 0 15px 35px 0 rgba(0, 0, 0, .3);
-            transform: translate3d(90%, 0, -200px) rotateY(15deg);
-        }
-
-        #s3:checked~.cards #slide2,
-        #s1:checked~.cards #slide3,
-        #s2:checked~.cards #slide1 {
-            box-shadow: 0 15px 35px 0 rgba(0, 0, 0, .3);
-            transform: translate3d(-90%, 0, -200px) rotateY(-15deg);
-        } */
-    }
 </style>

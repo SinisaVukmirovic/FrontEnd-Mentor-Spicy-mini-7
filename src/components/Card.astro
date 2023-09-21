@@ -33,9 +33,7 @@ const slides = [
 ]
 ---
 
-{slides.map(slide => (
-    // <input type="radio" name="slider" id={slide.idAndFor} checked>
-    
+{slides.map(slide => (    
     <label for={slide.for} id={slide.id}>
         <div class="card">
             <h2>{slide.plan}</h2>
@@ -150,11 +148,9 @@ const slides = [
         label {        
             border-radius: 1rem;
             position: absolute;
-            /* width: 430px; */
             left: 0;
             right: 0;
             margin: auto;
-            /* cursor: pointer; */
             transition: all .5s ease-in-out;
         }
 
@@ -162,47 +158,4 @@ const slides = [
             margin-bottom: 0;
         }
     }
-
-    /* @media (min-width: 1440px) {
-        label {        
-            border-radius: 1rem;
-            position: absolute; */
-            /* width: 430px; */
-            /* left: 0;
-            right: 0;
-            margin: auto; */
-            /* cursor: pointer; */
-            /* transition: transform .5s ease-in-out; */
-        /* } */
-
-        /* .card {
-            margin-bottom: 0;
-        } */
-
-        /* #s1:checked~.cards #slide1,
-        #s2:checked~.cards #slide2,
-        #s3:checked~.cards #slide3 {
-            box-shadow: 0 25px 50px 0 rgba(0, 0, 0, .5);
-            transform: translate3d(0, 0, 0);
-        }
-
-        #s3:checked~.cards #slide1,
-        #s1:checked~.cards #slide2,
-        #s2:checked~.cards #slide3 {
-            box-shadow: 0 15px 35px 0 rgba(0, 0, 0, .3);
-            transform: translate3d(90%, 0, -200px) rotateY(15deg);
-        }
-
-        #s3:checked~.cards #slide2,
-        #s1:checked~.cards #slide3,
-        #s2:checked~.cards #slide1 {
-            box-shadow: 0 15px 35px 0 rgba(0, 0, 0, .3);
-            transform: translate3d(-90%, 0, -200px) rotateY(-15deg);
-        } */
-
-        /* #slide1 .card { background-color: rgba(0, 255, 0, .2); }
-        #slide2 .card { background-color: rgba(0, 0, 255, .2); }
-        #slide3 .card { background-color: rgba(255, 0, 0, .2); } */
-    /* }         */
-
 </style>
