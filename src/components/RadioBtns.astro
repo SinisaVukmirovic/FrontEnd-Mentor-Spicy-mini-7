@@ -1,0 +1,23 @@
+---
+const radioBtns = [
+    {
+        id: 's1',
+    },
+    {
+        id: 's2',
+    },
+    {
+        id: 's3',
+    }
+]
+---
+
+{radioBtns.map(btn => (
+    <input type="radio" name="slider" id={btn.id} checked>
+))}
+
+<style>
+    input {
+        display: none;
+    }
+</style>

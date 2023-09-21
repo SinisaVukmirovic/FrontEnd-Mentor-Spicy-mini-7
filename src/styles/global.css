@@ -38,3 +38,31 @@ footer {
     /* position: fixed;
     bottom: 0; */
 }
+
+@media (min-width: 1440px) {    
+    /* #slide2 {
+        outline: 2px solid red;
+        order: 2;
+    } */
+
+    #s1:checked~.cards #slide1,
+    #s2:checked~.cards #slide2,
+    #s3:checked~.cards #slide3 {
+        box-shadow: 0 25px 50px 0 rgba(0, 0, 0, .5);
+        transform: translate3d(0, 0, 0);
+    }
+
+    #s3:checked~.cards #slide1,
+    #s1:checked~.cards #slide2,
+    #s2:checked~.cards #slide3 {
+        box-shadow: 0 15px 35px 0 rgba(0, 0, 0, .3);
+        transform: translate3d(100%, 0, -150px) rotateY(20deg);
+    }
+
+    #s3:checked~.cards #slide2,
+    #s1:checked~.cards #slide3,
+    #s2:checked~.cards #slide1 {
+        box-shadow: 0 15px 35px 0 rgba(0, 0, 0, .3);
+        transform: translate3d(-100%, 0, -150px) rotateY(-20deg);
+    }
+}
