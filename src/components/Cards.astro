@@ -67,8 +67,8 @@ import Card from './Card.astro';
     .cards {
         display: grid;
     }
-    
-    @media (min-width: 1440px) {
+
+    @media (min-width: 1024px) {
         .cards {
             display: grid;
             width: 25rem;
@@ -77,6 +77,18 @@ import Card from './Card.astro';
             perspective: 1000px;
             transform-style: preserve-3d;
             position: relative;
+        }
+    }
+    
+    @media (min-width: 1440px) {
+        /* .cards {
+            display: grid;
+            width: 25rem;
+            height: auto;
+            margin: 0 auto;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            position: relative; */
 
             /* & .card {
                 position: absolute;
